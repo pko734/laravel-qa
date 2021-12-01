@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Models\Question;
-use Illuminate\Support\Str;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -47,11 +46,5 @@ class User extends Authenticatable implements MustVerifyEmail
     public function questions()
     {
         return $this->hasMany(Question::class);
-    }
-
-    public function setTitleAttribute($value)
-    {
-        $this->attributes['title'] = $value;
-        $this->attributes['slug'] = Str::slug($value);
     }
 }
