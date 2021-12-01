@@ -47,4 +47,11 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(Question::class);
     }
+
+    public function getUrlAttribute()
+    {
+        //return route('questions.show', $this->id);
+        return '#';
+    }
+
 }
