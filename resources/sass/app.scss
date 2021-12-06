@@ -37,8 +37,11 @@
             color: $color-white;
         }
     }
+    .view {
+        margin-top: 10px;
+    }
 }
 
-.view {
-    margin-top: 10px;
+form.form-delete {
+    display: inline;
 }
